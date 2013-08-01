@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     @Styles.Render("~/Content/bootstrap")
     @RenderSection("styles", false)
@@ -13,11 +13,17 @@
     <div class="container">
         <div class="row">
             <div class="span12">
-                @Html.Partial("_Banner")
-                @if (!(ViewBag.HideMenu == true))
-                {
-                    @Html.Partial("_Menu")
-                }
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        @Html.Partial("_Banner")
+                        @if (ViewBag.HideMenu != true)
+                        {
+                            @Html.Partial("_Menu")
+                        }
+                    </div>
+                </div>
+                
+                
 
                 <section id="main-section">
                     @RenderBody()

@@ -1628,6 +1628,7 @@
     <EmbeddedResource Include="App_LocalResources\Shared\_Menu.cshtml.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>_Menu.cshtml.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="App_LocalResources\_ViewStart.cshtml.fr.resx">
       <DependentUpon>_ViewStart.cshtml.resx</DependentUpon>
