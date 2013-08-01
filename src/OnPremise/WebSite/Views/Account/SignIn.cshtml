@@ -16,7 +16,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true, SignIn_cshtml.SignInWasUnsuccessful)
+    @Html.ValidationSummary(true, SignIn_cshtml.SignInWasUnsuccessful, new{@class="alert alert-error"})
     <fieldset class="editor small signin">
         <legend>@SignIn_cshtml.Login</legend>
         <div>
