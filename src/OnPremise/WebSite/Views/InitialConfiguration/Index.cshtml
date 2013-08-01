@@ -10,7 +10,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true, "An Error Occurred", new{@class="alert alert-error"})
+    @Html.ValidationSummary(false, "An Error Occurred", new{@class="alert alert-error"})
 
     <div class="row">
         <div class="span6">
