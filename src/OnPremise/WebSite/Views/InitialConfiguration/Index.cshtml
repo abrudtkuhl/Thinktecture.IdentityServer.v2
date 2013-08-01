@@ -12,46 +12,54 @@
 {
     @Html.ValidationSummary(true)
 
-    <fieldset class="editor">
-        <legend>@Index_cshtml.Settings</legend>
+    <div class="row">
+        <div class="span6">
+            <fieldset class="editor">
+                <legend>@Index_cshtml.Settings</legend>
 
-        <div>
-            @Html.LabelFor(model => model.SiteName)
-            @Html.EditorFor(model => model.SiteName)
-            @Html.ValidationMessageFor(model => model.SiteName)
-        </div>
+                <div>
+                    @Html.LabelFor(model => model.SiteName)
+                    @Html.EditorFor(model => model.SiteName)
+                    @Html.ValidationMessageFor(model => model.SiteName)
+                </div>
 
-        <div>
-            @Html.LabelFor(model => model.IssuerUri)
-            @Html.EditorFor(model => model.IssuerUri)
-            @Html.ValidationMessageFor(model => model.IssuerUri)
-        </div>
+                <div>
+                    @Html.LabelFor(model => model.IssuerUri)
+                    @Html.EditorFor(model => model.IssuerUri)
+                    @Html.ValidationMessageFor(model => model.IssuerUri)
+                </div>
 
-        <div>
-            @Html.LabelFor(model => model.SigningCertificate)
-            @Html.DropDownList("SigningCertificate", Model.AvailableCertificatesList)
+                <div>
+                    @Html.LabelFor(model => model.SigningCertificate)
+                    @Html.DropDownList("SigningCertificate", Model.AvailableCertificatesList)
+                </div>
+            </fieldset>
         </div>
-    </fieldset>
-    
-    <fieldset class="editor">
-        <legend>@Index_cshtml.DefaultAccounts</legend>
-        <div>
-            @Html.LabelFor(model => model.CreateDefaultAccounts)
-            @Html.EditorFor(model => model.CreateDefaultAccounts)
-        </div>
+        <div class="span6">
+            <fieldset class="editor">
+                <legend>@Index_cshtml.DefaultAccounts</legend>
+                <div>
+                    @Html.LabelFor(model => model.CreateDefaultAccounts)
+                    @Html.EditorFor(model => model.CreateDefaultAccounts)
+                </div>
 
-        <div>
-            @Html.LabelFor(model => model.UserName)
-            @Html.EditorFor(model => model.UserName)
-        </div>
+                <div>
+                    @Html.LabelFor(model => model.UserName)
+                    @Html.EditorFor(model => model.UserName)
+                </div>
 
-        <div>
-            @Html.LabelFor(model => model.Password)
-            @Html.EditorFor(model => model.Password)
+                <div>
+                    @Html.LabelFor(model => model.Password)
+                    @Html.EditorFor(model => model.Password)
+                </div>
+            </fieldset>
         </div>
-    </fieldset>
-    
-    <div class="buttons"> 
-        <input type="submit" value="@Index_cshtml.Save" />
+    </div>
+    <div class="row">
+        <div class="span12">
+            <div class="form-actions">
+                <input type="submit" value="@Index_cshtml.Save" class="btn btn-primary" />
+            </div>
+        </div>
     </div>
 }
