@@ -1,3 +1,8 @@
-﻿.field-validation-error {
+﻿/* layout */
+footer {
+  text-align: center;
+}
+/* validation */
+.field-validation-error {
   color: #b94a48;
 }
