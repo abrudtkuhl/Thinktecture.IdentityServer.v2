@@ -10,7 +10,7 @@
 
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true)
+    @Html.ValidationSummary(true, "An Error Occurred", new{@class="alert alert-error"})
 
     <div class="row">
         <div class="span6">
@@ -39,8 +39,10 @@
             <fieldset class="editor">
                 <legend>@Index_cshtml.DefaultAccounts</legend>
                 <div>
-                    @Html.LabelFor(model => model.CreateDefaultAccounts)
-                    @Html.EditorFor(model => model.CreateDefaultAccounts)
+                    <label class="checkbox">
+                        <input class="checkbox" data-val="true" data-val-required="The Create default roles and admin account? field is required." id="CreateDefaultAccounts" name="CreateDefaultAccounts" type="checkbox" value="true" data-original-title="" title="" />
+                        Create default roles and admin account?
+                    </label>
                 </div>
 
                 <div>
