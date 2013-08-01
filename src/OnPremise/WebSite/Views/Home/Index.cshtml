@@ -3,12 +3,14 @@
     ViewBag.Title = ViewBag.SiteName;
 }
 
-<h2>@string.Format(Index_cshtml.WelcomeToSite, ViewBag.SiteName)</h2>
+<div class="hero-unit">
+    <h2>@string.Format(Index_cshtml.WelcomeToSite, ViewBag.SiteName)</h2>
 
-<p>
-    @Html.ActionLink(Index_cshtml.ViewWsFederationMetadata, "Generate", "FederationMetadata")
-</p>
+    <p>
+        @Html.ActionLink(Index_cshtml.ViewWsFederationMetadata, "Generate", "FederationMetadata")
+    </p>
 
-<p>
-    @Html.ActionLink(Index_cshtml.ApplicationIntegration, "appintegration", "home")
-</p>
+    <p>
+        @Html.ActionLink(Index_cshtml.ApplicationIntegration, "appintegration", "home")
+    </p>
+</div>
