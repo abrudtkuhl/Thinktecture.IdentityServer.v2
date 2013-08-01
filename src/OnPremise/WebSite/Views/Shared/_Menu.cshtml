@@ -9,7 +9,6 @@
     {
         <li>@Html.ActionLink(_Menu_cshtml.Home, "index", "home", new{area=""}, null)</li>
         <li>@Html.ActionLink(_Menu_cshtml.SignOut, "signout", "account", new{area=""}, null)</li>
-        <li>@string.Format(_Menu_cshtml.SignedUser, @Context.User.Identity.Name)</li>
     }
     else
     {
