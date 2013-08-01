@@ -25,7 +25,7 @@
 
                 <div>
                     @Html.LabelFor(model => model.IssuerUri)
-                    @Html.EditorFor(model => model.IssuerUri)
+                    @Html.TextBoxFor(model=>model.IssuerUri, new{@class="span6"})
                     @Html.ValidationMessageFor(model => model.IssuerUri)
                 </div>
 
