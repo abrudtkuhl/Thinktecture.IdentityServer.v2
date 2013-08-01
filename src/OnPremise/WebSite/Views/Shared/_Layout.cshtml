@@ -5,24 +5,31 @@
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    @Scripts.Render("~/bundles/js/modernizr")
-    @Styles.Render("~/bundles/css/site")
+    @Styles.Render("~/Content/bootstrap")
     @RenderSection("styles", false)
 </head>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="span12">
+                @Html.Partial("_Banner")
+                @if (!(ViewBag.HideMenu == true))
+                {
+                    @Html.Partial("_Menu")
+                }
 
-    @Html.Partial("_Banner")
-    @if (!(ViewBag.HideMenu == true))
-    {
-        @Html.Partial("_Menu")
-    }
-
-    <section id="main-section">
-        @RenderBody()
-    </section>
+                <section id="main-section">
+                    @RenderBody()
+                </section>
+            </div>
+        </div>
+    </div>
+    
 
     @Scripts.Render("~/bundles/js/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", false)
 </body>
 </html>
