@@ -1,6 +1,7 @@
 ﻿/* layout */
 footer {
   text-align: center;
+  padding: 5px;
 }
 /* validation */
 .field-validation-error {
