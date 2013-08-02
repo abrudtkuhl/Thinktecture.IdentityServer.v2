@@ -12,38 +12,40 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="span12">
-                <div class="navbar navbar-inverse navbar-fixed-top">
-                    <div class="navbar-inner">
-                        <div class="container">
-                            @Html.Partial("_Banner")
-                            @if (ViewBag.HideMenu != true)
-                            {
-                                @Html.Partial("_Menu")
-                            }
-                            <div class="pull-right user-info">
-                                @string.Format(_Menu_cshtml.SignedUser, @Context.User.Identity.Name)
+    <div id="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                @Html.Partial("_Banner")
+                                @if (ViewBag.HideMenu != true)
+                                {
+                                    @Html.Partial("_Menu")
+                                }
+                                <div class="pull-right user-info">
+                                    @string.Format(_Menu_cshtml.SignedUser, @Context.User.Identity.Name)
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="span12">
-                <section id="main-section">
-                    @RenderBody()
-                </section>
+            <div class="row">
+                <div class="span12">
+                    <section id="main-section">
+                        @RenderBody()
+                    </section>
+                </div>
             </div>
+            <hr />
+            <footer class="row">
+                <div class="span12">
+                    <img src="@Url.Content("~/Content/images/logo.jpg")" width="100" alt="thinktecture Identity Server" />
+                </div>
+            </footer>
         </div>
-        <hr />
-        <footer class="row">
-            <div class="span12">
-                <img src="@Url.Content("~/Content/images/logo.jpg")" width="100" alt="thinktecture Identity Server" />
-            </div>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/js/jquery")

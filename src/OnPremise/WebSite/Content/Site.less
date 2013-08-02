@@ -1,13 +1,26 @@
 @error: #b94a48;
+@shadow: #888;
+@border: #f1f1f1;
 
 /* layout */
+
 body {
-    padding: 60px 0 40px 0;
+    padding: 40px 0 40px 0;
+    background-color: #999999; 
 }
 footer { 
     text-align: center; 
-    padding: 5px;
+    padding: 5px 0 20px 0;
 }
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: solid 2px @border;
+    .rounded-border-bottom(10px);
+    .box-shadow;
+}
+
 
 /* nav */
 .navbar { color: #999999; }
@@ -16,4 +29,20 @@ footer {
 /* validation */
 .field-validation-error {
     color: @error;
+}
+
+/* mixins */
+.rounded-border-bottom (@radius) {
+    -webkit-border-bottom-right-radius: @radius;
+    -webkit-border-bottom-left-radius: @radius;
+    -moz-border-radius-bottomright: @radius;
+    -moz-border-radius-bottomleft: @radius;
+    border-bottom-right-radius: @radius;
+    border-bottom-left-radius: @radius;
+}
+
+.box-shadow {
+    -moz-box-shadow: 0 0 5px 5px @shadow;
+    -webkit-box-shadow: 0 0 5px 5px @shadow;
+    box-shadow: 0 0 5px 5px @shadow;
 }
